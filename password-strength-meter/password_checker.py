@@ -9,10 +9,10 @@ def load_lottie_url(url):
     try:
         response = requests.get(url)
         if response.status_code == 200:
-            return response.json()  # return json data if the request is successful
+            return response.json()
         return None
     except:
-        return None  # return None if there's any issue with the request
+        return None 
 
 # Function to check password strength
 def check_password_strength(password):
@@ -50,7 +50,7 @@ def check_password_strength(password):
 # Function to generate a strong random password
 def generate_strong_password():
     characters = string.ascii_letters + string.digits + "!@#$%^&*"
-    password = ''.join(random.choice(characters) for _ in range(12))  # 12 character password
+    password = ''.join(random.choice(characters) for _ in range(12)) 
     return password
 
 # Streamlit UI setup
@@ -76,7 +76,7 @@ if st.button("🚀 Check Password Strength"):
             # Lottie animation
             lottie = load_lottie_url("https://lottie.host/9a1e3a95-3575-4c13-9d26-1597fbdc8233/rfQ8c0JIkM.json")
             if lottie:
-                st.json(lottie)  # If the animation loads successfully, display it
+                st.json(lottie)
         elif score == 3:
             st.warning("⚠️ Your password is Moderate. Improve it!")
             for msg in feedback:
