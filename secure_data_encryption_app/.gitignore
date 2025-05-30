@@ -1,6 +1,6 @@
 secret.key
 data.json
-fernit_key
+fernet_key
 key
 encrypted_data.json
 __pycache__/
