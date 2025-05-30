@@ -1,0 +1,7 @@
+secret.key
+data.json
+fernit_key
+key
+encrypted_data.json
+__pycache__/
+*.pyc
